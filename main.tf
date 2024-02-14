@@ -1,8 +1,3 @@
-provider "google" {
-  project     = "<mystic-primacy-407507>"
-  region      = "us-central1"
-}
-
 resource "google_compute_instance" "default" {
   name         = "terraform-instance"
   machine_type = "e2-medium"
