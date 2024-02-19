@@ -1,3 +1,18 @@
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 3.5"
+    }
+  }
+}
+
+provider "google" {
+  credentials = file("~/terraform-key.json")
+  project     = "studious-booth-414313"
+  region      = "us-central1"
+}
+
 resource "google_compute_instance" "default" {
   name         = "terraform-instance"
   machine_type = "e2-medium"
